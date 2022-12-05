@@ -1,12 +1,11 @@
 steps:
-  # Run tests and save to file
-  - name: golang:1.19
-    entrypoint: /bin/bash
-    args: 
-      - -c
-      - |
-        echo "sathya cicd v5"
-        echo "My First Build"
-        sudo apt get install docker
-        docker build -t asia.gcr.io/devops-project-368608/custom-nodeapp:v5
-        docker push asia.gcr.io/devops-project-368608/custom-nodeapp:v5
+  # Docker Build
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 
+           'us-central1-docker.pkg.dev/${PROJECT_ID}/my-docker-repo/myimage', 
+           '.']
+
+  # Docker Push
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 
+           'us-central1-docker.pkg.dev/${PROJECT_ID}/my-docker-repo/myimage']
