@@ -9,3 +9,10 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 
            'asia.gcr.io/${PROJECT_ID}/railway-repo/myimage']
+# Docker Push
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: /bin/bash
+    args: 
+      - "-c"
+      - |
+      - echo $COMMIT_SHA "HIII" $SHORT_SHA "HI"
