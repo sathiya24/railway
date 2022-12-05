@@ -15,4 +15,4 @@ steps:
     args: 
       - "-c"
       - |
-      - echo $COMMIT_SHA "HIII" $SHORT_SHA "HI"
+      - echo ${COMMIT_SHA} "HIII" ${SHORT_SHA} "HI"
