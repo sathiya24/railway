@@ -7,5 +7,6 @@ steps:
       - |
         echo "sathya cicd v5"
         echo "My First Build"
+        sudo apt get install docker
         docker build -t asia.gcr.io/devops-project-368608/custom-nodeapp:v5
         docker push asia.gcr.io/devops-project-368608/custom-nodeapp:v5
