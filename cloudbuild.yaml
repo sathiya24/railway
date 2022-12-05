@@ -5,4 +5,4 @@ steps:
     args: 
       - -c
       - |
-        echo "sathya cicd"
+        echo "sathya cicd v2"
