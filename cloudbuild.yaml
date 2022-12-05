@@ -7,3 +7,5 @@ steps:
       - |
         echo "sathya cicd v5"
         echo "My First Build"
+        gcr.io/cloud-builders/docker build -t asia.gcr.io/devops-project-368608/custom-nodeapp:v5
+        gcr.io/cloud-builders/docker push asia.gcr.io/devops-project-368608/custom-nodeapp:v5
