@@ -7,7 +7,7 @@ const HOST = '0.0.0.0';
 
 const app = express();
 app.get('/', (req, res) => {
-res.send('<h2 style="color: purple"> Welcome to the latest Shelfperks Apps!!<h2>');
+res.send('<h2 style="color: purple"> Welcome to the New World!!<h2>');
 });
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
