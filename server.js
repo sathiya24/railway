@@ -8,10 +8,10 @@ const HOST = '0.0.0.0';
 const app = express();
 app.get('/employee', (req, res) => {
     
-    res.send('New Employee Onboaring');
+    res.send('New Employee Onboaring on 12/12/2022');
 });
 app.get('/', (req, res) => {
-res.send('<h2 style="color: purple"> Welcome to the NodeApps<h2>');
+res.send('<h2 style="color: purple"> Welcome to the NodeApps!!<h2>');
 });
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
