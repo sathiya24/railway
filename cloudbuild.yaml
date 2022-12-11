@@ -22,6 +22,6 @@ steps:
     args:
       - run
       - --filename=nodeappemployee.yaml
-      - --image=asia.gcr.io/${PROJECT_ID}/railway-repo/myimage:${SHORT_SHA}
+      - --image='asia.gcr.io/${PROJECT_ID}/railway-repo/myimage:${SHORT_SHA}'
       - --location=us-central1-c
       - --cluster=cluster-1
