@@ -21,7 +21,7 @@ mongoose.connect(process.env.CONNECTION_STRING)
 
 //Get Method
 app.get('/product', (req, res) =>{
-    res.send('hello world 2023!!!');
+    res.send('hello world');
 })
 
 
