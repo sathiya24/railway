@@ -1,17 +1,38 @@
-'use strict';
-
 const express = require('express');
-
-const PORT = 8083;
-const HOST = '0.0.0.0';
-
 const app = express();
-app.get('/employee', (req, res) => {
-    
-    res.send('New Employee Onboaring on 12/12/2022');
-});
-app.get('/', (req, res) => {
-res.send('<h2 style="color: purple"> Welcome to 2023!!<h2>');
-});
-app.listen(PORT, HOST);
-console.log(`Running on http://${HOST}:${PORT}`);
+const morgan = require('morgan');
+const mongoose = require('mongoose');
+require('dotenv/config');
+const api = process.env.API_URL;
+
+
+//middleware
+app.use(morgan('tiny'));
+app.use(express.json());
+
+//Mongodb connection
+mongoose.connect(process.env.CONNECTION_STRING)
+.then(() =>{
+    console.log('DB Connection is ready!')
+})
+.catch((err) => {
+    console.log(err);
+})
+
+//Get Method
+app.get('/product', (req, res) =>{
+    res.send('hello world 2023!');
+})
+
+
+//Post Method
+app.post('/products', (req, res) =>{
+    const newProduct = req.body;
+    console.log(newProduct);
+    res.send(newProduct);
+} )
+app.listen(9014, ()=>{
+    console.log('Server is listening on http://localhost:9014')
+})
+
+
